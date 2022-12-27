@@ -3,22 +3,25 @@ let index = 0
 let textPosition = 0
 let flag = true
 let destination = document.getElementById('typedtext')
+let getteQuote = document.querySelector('.getteQuote')
 
 window.addEventListener('load', typewriter)
 
 function loadQuote() {
     const url = 'https://api.quotable.io/random'
-    
+
     fetch(url)
         .then(response => {
             if (response.ok) {
                 return response.json()
             } else {
-                console.log(response.status);
+                // console.log(response.status);
+                getteQuote.innerHTML = response.status
             }
         })
         .then(data => {
             quoteArray[index] = data.content
+            getteQuote.innerHTML = quoteArray
         })
 }
 

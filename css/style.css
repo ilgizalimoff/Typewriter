@@ -1,5 +1,5 @@
-body{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: 2px;
     padding: 20px;
     font-size: 22px;
@@ -8,12 +8,18 @@ body{
     text-shadow: 0 0 10px #00ffff;
 }
 
-span{
+span {
     animation: blinker 1s linear infinite;
 }
 
-@keyframes blinker{
-    50%{
+.getteQuote {
+    color: white;
+    border-bottom: 3px solid white;
+    margin-bottom: 20px;
+}
+
+@keyframes blinker {
+    50% {
         opacity: 0;
     }
 }
